@@ -194,6 +194,7 @@ const InteractiveGallery: React.FC<InteractiveGalleryProps> = ({ images, onImage
         className="relative w-full group select-none"
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
+        onContextMenu={(e) => e.preventDefault()}
       >
         <div
           ref={containerRef}
@@ -262,18 +263,20 @@ const InteractiveGallery: React.FC<InteractiveGalleryProps> = ({ images, onImage
             return (
               <div
                 key={src + index}
-                className="absolute top-1/2 left-1/2 w-[70%] md:w-[45%] max-w-[450px] aspect-[4/3] rounded-2xl bg-neutral-900 shadow-2xl shadow-black/80 origin-center will-change-transform"
+                className="absolute top-1/2 left-1/2 w-[70%] md:w-[45%] max-w-[450px] aspect-[4/3] rounded-2xl bg-neutral-900 shadow-2xl shadow-black/80 origin-center will-change-transform select-none"
                 style={{
                   transform,
                   zIndex,
                   opacity,
                   filter: `brightness(${brightness})`,
                   transition: transitionStyle,
+                  WebkitTouchCallout: 'none',
+                  WebkitUserSelect: 'none',
                 }}
                 onClick={() => handleCardClick(index, offset)}
                 onContextMenu={(e) => e.preventDefault()}
               >
-                {/* Protective Layer for click handling */}
+                {/* Protective Layer for click handling and copy protection */}
                 <div className="absolute inset-0 z-10"></div>
                 <img
                   src={src}
@@ -281,6 +284,10 @@ const InteractiveGallery: React.FC<InteractiveGalleryProps> = ({ images, onImage
                   className="w-full h-full object-cover rounded-2xl pointer-events-none select-none"
                   draggable="false"
                   loading="lazy"
+                  style={{ 
+                    WebkitTouchCallout: 'none',
+                    WebkitUserSelect: 'none',
+                  }}
                 />
               </div>
             );
