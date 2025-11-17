@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 
@@ -44,8 +44,9 @@ const Lightbox: React.FC<LightboxProps> = ({
 
   return createPortal(
     <div 
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-md animate-fade-in"
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-md animate-fade-in select-none"
       onClick={onClose}
+      onContextMenu={(e) => e.preventDefault()}
     >
       {/* Close Button */}
       <button
@@ -80,13 +81,23 @@ const Lightbox: React.FC<LightboxProps> = ({
 
       {/* Image Container */}
       <div 
-        className="relative max-w-[95vw] max-h-[95vh] p-2"
+        className="relative max-w-[95vw] max-h-[95vh] p-2 select-none"
         onClick={(e) => e.stopPropagation()} 
+        onContextMenu={(e) => e.preventDefault()}
       >
+        {/* Protective transparent overlay to prevent drag/save/long-press */}
+        <div className="absolute inset-0 z-20" onContextMenu={(e) => e.preventDefault()}></div>
+
         <img
           src={imageSrc}
           alt="Enlarged view"
-          className="max-w-full max-h-[90vh] object-contain rounded-md shadow-2xl shadow-black"
+          className="max-w-full max-h-[90vh] object-contain rounded-md shadow-2xl shadow-black pointer-events-none select-none"
+          draggable={false}
+          style={{ 
+            WebkitTouchCallout: 'none',
+            WebkitUserSelect: 'none',
+            userSelect: 'none'
+          }}
         />
       </div>
 
