@@ -8,13 +8,7 @@ const artistthreeProfile = '/images/profiles/artists3.jpg';
 const artistfourProfile = '/images/profiles/artists4.jpg';
 const artistfiveProfile = '/images/profiles/artists5.jpg';
 
-const developerProfile = '/images/profiles/developers.jpg';
-const designerProfile = '/images/profiles/designers.jpg';
-const editorProfile = '/images/profiles/editors.jpg';
-const cosplayProfile = '/images/profiles/cosplay.jpg';
 const moderatorProfile = '/images/profiles/moderators.jpg';
-const furryProfile = '/images/profiles/furry.jpg';
-
 
 export const navLinks: NavLink[] = [
   { href: '#home', label: 'Home' },
@@ -35,100 +29,51 @@ export const navLinks: NavLink[] = [
   { href: '#contact', label: 'Contact' },
 ];
 
-// NOTE: Automatic image loading has been replaced with a manual list for stability.
-// To add, remove, or change gallery images, update the paths in the arrays below.
+// MANUAL IMAGE LISTS (STABLE FIX)
+// These lists replace the dynamic imports that were breaking the build on some devices.
 const galleries = {
   artists: [
-    '/images/artists/1.jpg',
-    '/images/artists/2.jpg',
-    '/images/artists/3.jpg',
-    '/images/artists/24.jpg',
-    '/images/artists/25.jpg',
-    '/images/artists/7.jpg',
-    '/images/artists/8.jpg',
-    '/images/artists/9.jpg',
-    '/images/artists/10.jpg',
-    '/images/artists/11.jpg',
-    '/images/artists/19.jpg',
-    '/images/artists/13.jpg',
-    '/images/artists/14.jpg',
-    '/images/artists/15.jpg',
-    '/images/artists/16.jpg',
-    '/images/artists/17.jpg',
-    '/images/artists/20.jpg',
+    '/images/artists/1.jpg', '/images/artists/2.jpg', '/images/artists/3.jpg',
+    '/images/artists/7.jpg', '/images/artists/8.jpg', '/images/artists/9.jpg',
+    '/images/artists/10.jpg', '/images/artists/11.jpg', '/images/artists/13.jpg',
+    '/images/artists/14.jpg', '/images/artists/15.jpg', '/images/artists/16.jpg',
+    '/images/artists/17.jpg', '/images/artists/19.jpg', '/images/artists/20.jpg',
+    '/images/artists/24.jpg', '/images/artists/25.jpg'
   ],
   developers: [
-    '/images/developers/1.jpg',
-    '/images/developers/2.jpg',
-    '/images/developers/3.jpg',
-    '/images/developers/4.jpg',
-    '/images/developers/5.jpg',
-    '/images/developers/6.jpg',
-    '/images/developers/7.jpg',
-    '/images/developers/8.jpg',
-    '/images/developers/9.jpg',
-    '/images/developers/10.jpg',
+    '/images/developers/1.jpg', '/images/developers/2.jpg', '/images/developers/3.jpg',
+    '/images/developers/4.jpg', '/images/developers/5.jpg', '/images/developers/6.jpg',
+    '/images/developers/7.jpg', '/images/developers/8.jpg', '/images/developers/9.jpg',
+    '/images/developers/10.jpg'
   ],
   designers: [
-    '/images/designers/1.jpg',
-    '/images/designers/2.jpg',
-    '/images/designers/3.jpg',
-    '/images/designers/4.jpg',
-    '/images/designers/5.jpg',
-    '/images/designers/6.jpg',
-    '/images/designers/7.jpg',
-    '/images/designers/8.jpg',
+    '/images/designers/1.jpg', '/images/designers/2.jpg', '/images/designers/3.jpg',
+    '/images/designers/4.jpg', '/images/designers/5.jpg', '/images/designers/6.jpg',
+    '/images/designers/7.jpg', '/images/designers/8.jpg'
   ],
   editors: [
-    '/images/editors/1.jpg',
-    '/images/editors/2.jpg',
-    '/images/editors/3.jpg',
-    '/images/editors/4.jpg',
-    '/images/editors/5.jpg',
-    '/images/editors/6.jpg',
-    '/images/editors/7.jpg',
-    '/images/editors/8.jpg',
-    '/images/editors/9.jpg',
-    '/images/editors/10.jpg',
+    '/images/editors/1.jpg', '/images/editors/2.jpg', '/images/editors/3.jpg',
+    '/images/editors/4.jpg', '/images/editors/5.jpg', '/images/editors/6.jpg',
+    '/images/editors/7.jpg', '/images/editors/8.jpg', '/images/editors/9.jpg',
+    '/images/editors/10.jpg'
   ],
   cosplay: [
-    '/images/cosplay/1.jpg',
-    '/images/cosplay/2.jpg',
-    '/images/cosplay/3.jpg',
-    '/images/cosplay/4.jpg',
-    '/images/cosplay/5.jpg',
+    '/images/cosplay/1.jpg', '/images/cosplay/2.jpg', '/images/cosplay/3.jpg',
+    '/images/cosplay/4.jpg', '/images/cosplay/5.jpg'
   ],
   moderators: [
-    '/images/moderators/1.jpg',
-    '/images/moderators/2.jpg',
-    '/images/moderators/3.jpg',
-    '/images/moderators/4.jpg',
-    '/images/moderators/5.jpg',
-    '/images/moderators/6.jpg',
-    '/images/moderators/7.jpg',
-    '/images/moderators/8.jpg',
-    '/images/moderators/9.jpg',
-    '/images/moderators/10.jpg',
+    '/images/moderators/1.jpg', '/images/moderators/2.jpg', '/images/moderators/3.jpg',
+    '/images/moderators/4.jpg', '/images/moderators/5.jpg', '/images/moderators/6.jpg',
+    '/images/moderators/7.jpg', '/images/moderators/8.jpg', '/images/moderators/9.jpg',
+    '/images/moderators/10.jpg'
   ],
   furry: [
-    '/images/furry/1.jpg',
-    '/images/furry/5.jpg',
-    '/images/furry/6.jpg',
-    '/images/furry/7.jpg',
-    '/images/furry/8.jpg',
-    '/images/furry/11.jpg',
-    '/images/furry/12.jpg',
-    '/images/furry/2.jpg',
-    '/images/furry/3.jpg',
-    '/images/furry/4.jpg',
-    '/images/furry/9.jpg',
-    '/images/furry/13.jpg',
-    '/images/furry/14.jpg',
-    '/images/furry/15.jpg',
-    '/images/furry/16.jpg',
-    '/images/furry/17.jpg',
-    '/images/furry/18.jpg',
-    '/images/furry/19.jpg',
+    '/images/furry/1.jpg', '/images/furry/2.jpg', '/images/furry/3.jpg',
+    '/images/furry/4.jpg', '/images/furry/5.jpg', '/images/furry/6.jpg',
+    '/images/furry/7.jpg', '/images/furry/8.jpg', '/images/furry/9.jpg',
+    '/images/furry/11.jpg', '/images/furry/12.jpg', '/images/furry/13.jpg',
+    '/images/furry/14.jpg', '/images/furry/15.jpg', '/images/furry/16.jpg',
+    '/images/furry/17.jpg', '/images/furry/18.jpg', '/images/furry/19.jpg'
   ],
 };
 
