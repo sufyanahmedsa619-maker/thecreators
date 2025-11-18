@@ -13,6 +13,7 @@ A vibrant, animated, and interactive portfolio website for **The Creatorz**, a c
 -   **Framework**: [React](https://reactjs.org/)
 -   **Build Tool**: [Vite](https://vitejs.dev/)
 -   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+-   **Routing**: [React Router](https://reactrouter.com/)
 
 ---
 
@@ -36,9 +37,9 @@ A vibrant, animated, and interactive portfolio website for **The Creatorz**, a c
     ```
 
 3.  **Add your images:**
-    -   Place your image files into the `public/images` directory.
-    -   Organize them into subfolders for each category (e.g., `artists`, `developers`, `profiles`).
-    -   See `public/images/README.md` for more details on the automatic image loading.
+    -   **Gallery Images:** Place them in `public/images` (e.g., `public/images/artists/1.jpg`).
+    -   **Profile Pictures:** Place them in `public/images/profiles`.
+    -   **Website Icon:** Place your `icon.jpg` directly in the `public` folder (path: `public/icon.jpg`).
 
 4.  **Run the development server:**
     ```bash
@@ -48,7 +49,22 @@ A vibrant, animated, and interactive portfolio website for **The Creatorz**, a c
 
 ---
 
+## ☁️ Deployment (Vercel)
+
+This project is optimized for deployment on Vercel.
+
+1.  Push your code to a GitHub repository.
+2.  Import the repository into Vercel.
+3.  Vercel should automatically detect the **Vite** framework.
+4.  Ensure the settings are:
+    -   **Build Command:** `npm run build`
+    -   **Output Directory:** `dist`
+    -   **Install Command:** `npm install`
+5.  Click **Deploy**.
+
+---
+
 ## 🎨 Managing Content
 
 -   **To add or remove a member:** Modify the `membersData` array in `src/constants.ts`.
--   **To add or remove images:** Simply add or remove image files from the appropriate subfolder inside `public/images`. The galleries will update automatically. No code changes needed!
+-   **To add or remove images:** Simply add or remove image files from the appropriate subfolder inside `public/images` and update the list in `src/constants.ts`.
