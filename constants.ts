@@ -7,6 +7,7 @@ const artisttwoProfile = '/images/profiles/artists2.jpg';
 const artistthreeProfile = '/images/profiles/artists3.jpg';
 const artistfourProfile = '/images/profiles/artists4.jpg';
 const artistfiveProfile = '/images/profiles/artists5.jpg';
+const artistsixProfile = '/images/profiles/artists6.png';
 
 const moderatorProfile = '/images/profiles/moderators.jpg';
 
@@ -88,7 +89,8 @@ export const membersData: Member[] = [
         { contact: 'Discord: @gaia_here', profileImage: artisttwoProfile },
         { contact: 'Discord: @alessia_her', profileImage: artistthreeProfile },
         { contact: 'Discord: @vayra_her', profileImage: artistfourProfile },
-        { contact: 'Discord: @vixara_here', profileImage: artistfiveProfile }
+        { contact: 'Discord: @vixara_here', profileImage: artistfiveProfile },
+        { contact: 'Discord: @dakota_here', profileImage: artistsixProfile }
 	],
     galleryImages: galleries.artists,
   },
